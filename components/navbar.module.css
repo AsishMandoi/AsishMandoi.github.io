@@ -1,0 +1,55 @@
+.navbarOnDesktop {
+  max-width: 48rem;
+  height: 10vh;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 18px;
+}
+
+.list1 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  list-style: none;
+}
+
+.list2 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  list-style: none;
+}
+
+.listItem {
+  margin: 0 12px;
+  padding: 0;
+}
+
+.social {
+  margin: 0 12px 0 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hide element on Desktop */
+@media only screen and (min-width: 1537px) {
+  .navbarOnDesktop {
+      display: none !important;
+  }
+}
+
+/* Hide element on Tablet/Phone */
+/* @media only screen and (max-width: 767px) {
+  .navbarOnMobileTablet {
+      display: none !important;
+  }
+} */
