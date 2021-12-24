@@ -1,11 +1,11 @@
-.navbarOnDesktop {
+.navbar {
   max-width: 48rem;
   height: 10vh;
   margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px 18px;
+  padding: 15px 36px;
 }
 
 .list1 {
@@ -41,15 +41,15 @@
 }
 
 /* Hide element on Desktop */
-@media only screen and (min-width: 1537px) {
-  .navbarOnDesktop {
+@media only screen and (min-width: 1800px) {
+  .list1 {
       display: none !important;
   }
 }
 
 /* Hide element on Tablet/Phone */
-/* @media only screen and (max-width: 767px) {
-  .navbarOnMobileTablet {
+@media only screen and (max-width: 500px) {
+  .list1 {
       display: none !important;
   }
-} */
+}

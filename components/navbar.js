@@ -6,7 +6,7 @@ import { GithubIcon, LinkedinIcon } from './svg-components'
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbarOnDesktop}>
+    <nav className={styles.navbar}>
       <ul className={styles.list1}>
         <li className={styles.listItem}>
           <Link href="/"><a>Home</a></Link>
