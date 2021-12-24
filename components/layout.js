@@ -18,6 +18,7 @@ export default function Layout({ children, home }) {
           <link rel="icon" href="/images/favicon.ico" />
           <meta name="description" content="A website designed and built using Nextjs by Asish Mandoi" />
           <meta name="og:title" content={siteTitle} />
+          <meta property="og:image" content="/images/preview_image.jpg" />
         </Head>
         <header className={styles.header}>
           {home ? (
