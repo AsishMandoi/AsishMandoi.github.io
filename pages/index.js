@@ -11,26 +11,6 @@ export default function Home() {
       </Head>
       <section className={utilStyles.intro}>
         <p>Hello! I'm Asish, a junior undergraduate pursuing a Bachelor's degree in Electrical Engineering at the Indian Institute of Technology Kanpur. My interests lie in Software Development and Quantum Computing.</p>
-        {/* <Link href={`/about`}>
-          <a>
-            <h2 className={utilStyles.headingMd}>About</h2>
-          </a>
-        </Link>
-        <Link href="/resume.pdf">
-          <a>
-            <h2 className={utilStyles.headingMd}>Resume</h2>
-          </a>
-        </Link>
-        <Link href="/blogs">
-          <a>
-            <h2 className={utilStyles.headingMd}>Blogs</h2>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a>
-            <h2 className={utilStyles.headingMd}>Contact</h2>
-          </a>
-        </Link> */}
       </section>
     </Layout>
   )

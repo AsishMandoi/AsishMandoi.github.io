@@ -15,8 +15,8 @@ export default function Layout({ children, home }) {
       { <Navbar />}
       <div className={styles.container}>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="default layout component" />
+          <link rel="icon" href="/images/favicon.ico" />
+          <meta name="description" content="A website designed and built using Nextjs by Asish Mandoi" />
           <meta name="og:title" content={siteTitle} />
         </Head>
         <header className={styles.header}>
@@ -63,6 +63,22 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </div>
+        <section className={styles.links}>
+          <ul className={utilStyles.list}>
+            <li>
+              <Link href={`/about`}><a><h2 className={utilStyles.textMd}>About</h2></a></Link>
+            </li>
+            <li>
+              <Link href="/resume.pdf"><a><h2 className={utilStyles.textMd}>Resume</h2></a></Link>
+            </li>
+            <li>
+              <Link href="/blogs"><a><h2 className={utilStyles.textMd}>Blogs</h2></a></Link>
+            </li>
+            <li>
+              <Link href="/contact"><a><h2 className={utilStyles.textMd}>Contact</h2></a></Link>
+            </li>
+          </ul>
+        </section>
       <Footer />
     </>
   )

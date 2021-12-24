@@ -40,16 +40,9 @@
   height: 30px;
 }
 
-/* Hide element on Desktop */
-@media only screen and (min-width: 1800px) {
-  .list1 {
-      display: none !important;
-  }
-}
-
 /* Hide element on Tablet/Phone */
-@media only screen and (max-width: 500px) {
-  .list1 {
-      display: none !important;
+@media only screen and (max-width: 560px) {
+  .navbar {
+    display: none !important;
   }
 }
