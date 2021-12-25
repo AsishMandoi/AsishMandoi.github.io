@@ -57,6 +57,10 @@
   color: #666;
 }
 
+.justifyText {
+  text-align: justify;
+}
+
 .intro p {
   font-size: 1.4rem;
   line-height: 1.4;

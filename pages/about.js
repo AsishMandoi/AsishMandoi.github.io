@@ -9,7 +9,7 @@ export default function About({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className={utilStyles.justifyText}>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

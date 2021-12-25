@@ -17,5 +17,6 @@ Apart from being engrossed in topics in science and technology, I like to spend 
 
 I firmly believe that our passion combined with ordinary-seeming random events in our life can lead us to great things. I will continue to explore fascinating areas of Science and Engineering, work on exciting technologies. I will always be grateful to all the amazing people who have influenced me in one way or another and helped me grow.
 
-
+\
+\
 *Please don’t hesitate to [get in touch with me](https://asishmandoi.github.io/contact) if you want to know more about me or discuss any common interest or an opportunity.*
