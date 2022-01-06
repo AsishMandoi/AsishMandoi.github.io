@@ -50,6 +50,11 @@ footer a {
   text-decoration: none;
 }
 
-#contact {
+#contact-item {
   font-weight: 600;
+}
+
+#contact-text {
+  text-align: justify;
+  line-height: 1.5;
 }

@@ -59,6 +59,7 @@
 
 .justifyText {
   text-align: justify;
+  line-height: 1.5;
 }
 
 .intro p {
