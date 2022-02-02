@@ -71,7 +71,7 @@ export default function Layout({ children, home }) {
               <Link href={`/about`}><a><h2 className={utilStyles.textMd}>About</h2></a></Link>
             </li>
             <li>
-              <Link href="/resume.pdf"><a><h2 className={utilStyles.textMd}>Resume</h2></a></Link>
+              <Link href="/cv.pdf"><a><h2 className={utilStyles.textMd}>CV</h2></a></Link>
             </li>
             <li>
               <Link href="/blogs"><a><h2 className={utilStyles.textMd}>Blogs</h2></a></Link>
