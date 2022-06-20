@@ -1,0 +1,17 @@
+/* BRIGHT */
+@font-face {
+  font-family: 'CMU Bright';
+  src: local('CMU Bright Oblique'), url('./bright/cmunbmo-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Bright';
+  src: local('CMU Bright Semibold'), url('./bright/cmunbsr-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Bright';
+  src: local('CMU Bright Semibold Oblique'), url('./bright/cmunbso-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Bright';
+  src: local('CMU Bright Roman'), url('./bright/cmunbmr-webfont.woff') format('woff');
+}

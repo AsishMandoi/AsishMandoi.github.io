@@ -1,0 +1,35 @@
+/* SERIF */
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Bold Italic'), local('CMU-Serif-Bold-Italic'), url('./serif/cmunbi-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Extra Bold Slanted'), local('CMU-Serif-Extra-Bold-Slanted'), url('./serif/cmunbl-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Bold'), local('CMU-Serif-Bold'), url('./serif/cmunbx-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Italic'), local('CMU-Serif-Italic'), url('./serif/cmunsl-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Upright Italic'), local('CMU-Serif-Upright-Italic'), url('./serif/cmunti-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Extra Slanted'), local('CMU-Serif-Extra-Slanted'), url('./serif/cmunui-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: local('CMU Serif Roman'), local('CMU-Serif-Roman'), url('./serif/cmunrm-webfont.woff') format('woff');
+}
+
+/* CLASSIC SERIF ITALIC */
+@font-face {
+  font-family: 'CMU Classic Serif Italic';
+  src: local('CMU Classic Serif Italic'), local('CMU-Classic-Serif-Italic'), url('./serif/cmunci-webfont.woff') format('woff');
+}
