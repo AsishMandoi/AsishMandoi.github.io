@@ -25,7 +25,7 @@ mpl.style.use('seaborn')
 # For example, functions to calculate next coordinate or step length
 
 C = 1
-eta = 0.1
+eta = 0.5
 bSize = 256
 setModelAveraging = True
 updMethod = "MBSPGD"
@@ -34,7 +34,7 @@ time_list	= []	# List of running times for plotting purposes
 objValSeq	= []	# List of running objective values for plotting purposes
 
 class CSVM:
-	def __init__(self, X, y, C = 1, eta = 0.1, B = 200, updateMethod = "MBPGD", stepMode = "quadratic", coordSelectMode = "randperm" ):
+	def __init__(self, X, y, C = 1, eta = 0.5, B = 200, updateMethod = "MBPGD", stepMode = "quadratic", coordSelectMode = "randperm" ):
 		(self.n, self.d) = X.shape
 		self.X = X
 		self.y = y
