@@ -26,7 +26,7 @@ mpl.style.use('seaborn')
 
 C = 1
 eta = 0.5
-bSize = 256
+bSize = 10000
 setModelAveraging = True
 updMethod = "MBSPGD"
 W_run_list = []	# List of running W vectors for model averaging and plotting purposes
@@ -34,7 +34,7 @@ time_list	= []	# List of running times for plotting purposes
 objValSeq	= []	# List of running objective values for plotting purposes
 
 class CSVM:
-	def __init__(self, X, y, C = 1, eta = 0.5, B = 200, updateMethod = "MBPGD", stepMode = "quadratic", coordSelectMode = "randperm" ):
+	def __init__(self, X, y, C = 1, eta = 0.5, B = 256, updateMethod = "MBSPGD", stepMode = "quadratic", coordSelectMode = "randperm" ):
 		(self.n, self.d) = X.shape
 		self.X = X
 		self.y = y
@@ -119,7 +119,7 @@ class CSVM:
 		self.isDual = True
 		i = self.selectCoord(0, self.d)
 		newAlphai = alpha[i] * self.y[i] + (1 - self.X[i,:].dot(w)) / self.XNormSq[i]
-		
+
 		if newAlphai > self.C:
 				newAlphai = self.C
 		if newAlphai < 0:
@@ -185,10 +185,29 @@ def get_features( X ):
 	# features can be 2 dimensional, 10 dimensional, 1000 dimensional, 123456 dimensional etc
 	# Keep in mind that the more dimensions you use, the slower will be your solver too
 	# so use only as many dimensions as are absolutely required to solve the problem
-	X = np.append( X, np.ones( np.array(X).shape[0] ).reshape(-1, 1), axis=1 )
 	X_new = np.cumprod( np.flip( 2 * X - 1 , axis = 1 ), axis = 1 )
-	X_tmp = khatri_rao( X_new.T, X_new.T )
-	X_new = khatri_rao( X_tmp, X_new.T ).T		# Assuming number of PUFs = 3
+	X_new = np.append( X_new, np.ones( np.array(X_new).shape[0] ).reshape(-1, 1), axis=1 )
+	(n, d) = X_new.shape
+	
+	# Assuming number of PUFs = 3
+	# Optimizing the number of features instead of naively using all of them, however if the number
+	# of features is greater this method might be too slow
+	if d <= 128:
+		visited = np.zeros((d, d, d), dtype=bool)
+		for i in range( 0, d ):
+			for j in range( i+1, d ):
+				for k in range( j+1, d ):
+					if visited[i, j, k] == False:
+						X_new = np.append( X_new, (X_new[:,i] * X_new[:,j] * X_new[:,k]).reshape(n, -1), axis=1 )
+						visited[i, j, k] = True
+						visited[i, k, j] = True
+						visited[j, i, k] = True
+						visited[j, k, i] = True
+						visited[k, i, j] = True
+						visited[k, j, i] = True
+	else:
+		X_tmp = khatri_rao( X_new.T, X_new.T )
+		X_new = khatri_rao( X_tmp, X_new.T ).T
 	return X_new
 
 def solver( X, y, timeout, spacing ):
