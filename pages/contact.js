@@ -17,7 +17,7 @@ export default function Contact() {
               <div id='contact-item'>Email</div>
               <small id='contact-text'>
                 <a href="mailto:akmandoi@iitk.ac.in">akmandoi@iitk.ac.in</a><br />
-                <a href="mailto:asishmandoi20@gmail.com">asishmandoi20@gmail.com</a><i> (if not from IIT Kanpur)</i>
+                <a href="mailto:asishmandoi20@gmail.com">asishmandoi20@gmail.com</a>
               </small>
             </li>
             <li className={utilStyles.listItem}>
