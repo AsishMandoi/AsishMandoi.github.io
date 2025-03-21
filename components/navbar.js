@@ -9,29 +9,29 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <ul className={styles.list1}>
         <li className={styles.listItem}>
-          <Link href="/"><a>Home</a></Link>
+          <Link href="/">Home</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/about"><a>About</a></Link>
+          <Link href="/about">About</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/cv.pdf"><a>CV</a></Link>
+          <Link href="/cv.pdf">CV</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/blogs"><a>Blogs</a></Link>
+          <Link href="/blogs">Blogs</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
       <ul className={styles.list2}>
         <li className={styles.social}>
-          <Link href={`https://www.linkedin.com/in/asish-mandoi-4178581b4/`}><a><div className={styles.img}><LinkedinIcon /></div></a></Link>
+          <Link href={`https://www.linkedin.com/in/asish-mandoi-4178581b4/`}><div className={styles.img}><LinkedinIcon /></div></Link>
         </li>
         <li className={styles.social}>
-          <Link href={`https://www.github.com/AsishMandoi`}><a><div className={styles.img}><GithubIcon /></div></a></Link>
+          <Link href={`https://www.github.com/AsishMandoi`}><div className={styles.img}><GithubIcon /></div></Link>
         </li>
       </ul>
     </nav>
-  )
+  );
 }

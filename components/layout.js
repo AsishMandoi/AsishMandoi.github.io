@@ -36,17 +36,15 @@ export default function Layout({ children, home }) {
             </>
           ) : (
             <>
-              {/* <Link href="/">
-                <a>
-                  <Image
-                    priority
-                    src="/images/profile.png"
-                    className={utilStyles.borderCircle}
-                    height={108}
-                    width={96}
-                    alt={name}
-                  />
-                </a>
+              {/* <Link href="/">                
+                <Image
+                  priority
+                  src="/images/profile.png"
+                  className={utilStyles.borderCircle}
+                  height={108}
+                  width={96}
+                  alt={name}
+                />
               </Link>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>
@@ -60,28 +58,28 @@ export default function Layout({ children, home }) {
         {!home && (
           <div className={styles.returnHome}>
             <Link href="/">
-              <a>« Return home</a>
+              « Return home
             </Link>
           </div>
         )}
       </div>
-        <section className={styles.links}>
-          <ul className={utilStyles.list}>
-            <li>
-              <Link href={`/about`}><a><h2 className={utilStyles.textMd}>About</h2></a></Link>
-            </li>
-            <li>
-              <Link href="/cv.pdf"><a><h2 className={utilStyles.textMd}>CV</h2></a></Link>
-            </li>
-            <li>
-              <Link href="/blogs"><a><h2 className={utilStyles.textMd}>Blogs</h2></a></Link>
-            </li>
-            <li>
-              <Link href="/contact"><a><h2 className={utilStyles.textMd}>Contact</h2></a></Link>
-            </li>
-          </ul>
-        </section>
+      <section className={styles.links}>
+        <ul className={utilStyles.list}>
+          <li>
+            <Link href={`/about`}><h2 className={utilStyles.textMd}>About</h2></Link>
+          </li>
+          <li>
+            <Link href="/cv.pdf"><h2 className={utilStyles.textMd}>CV</h2></Link>
+          </li>
+          <li>
+            <Link href="/blogs"><h2 className={utilStyles.textMd}>Blogs</h2></Link>
+          </li>
+          <li>
+            <Link href="/contact"><h2 className={utilStyles.textMd}>Contact</h2></Link>
+          </li>
+        </ul>
+      </section>
       <Footer />
     </>
-  )
+  );
 }
