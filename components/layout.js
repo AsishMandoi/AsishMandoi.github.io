@@ -7,13 +7,13 @@ import Footer from './footer'
 import Navbar from './navbar'
 
 const name = 'Asish Mandoi'
-export const siteTitle = 'Asish\'s Homepage'
+export const siteTitle = name
 
 export default function Layout({ children, home }) {
   return (
-    <>
+    <div className={styles.page}>
       { <Navbar />}
-      <div className={styles.container}>
+      <div className={`${home ? styles.homecontainer : styles.container}`}>
         <Head>
           <link rel="icon" href="/images/favicon.ico" />
           <meta name="description" content="A website designed and built using Nextjs by Asish Mandoi" />
@@ -27,39 +27,41 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={216}
-                width={192}
+                quality={100}
+                className={utilStyles.roundedSquare}
+                height={2126}
+                width={2126}
                 alt={name}
+                style={{ width: '216px', height: '216px' }}
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </>
           ) : (
             <>
-              {/* <Link href="/">
+              <Link href="/">
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className={utilStyles.roundedSquare}
                   height={108}
-                  width={96}
+                  width={108}
                   alt={name}
                 />
               </Link>
-              <Link href="/" className={utilStyles.colorInherit}>
-                  <h2 className={utilStyles.headingLg}>{name}</h2>
+              {/* <Link href="/" className={utilStyles.colorInherit}>
+                <h2 className={utilStyles.headingLg}>{name}</h2>
               </Link> */}
             </>
           )}
         </header>
         <main>{children}</main>
-        {!home && (
+        {/* {!home && (
           <div className={styles.returnHome}>
             <Link href="/">
               « Return home
             </Link>
           </div>
-        )}
+        )} */}
       </div>
       <section className={styles.links}>
         <ul className={utilStyles.list}>
@@ -78,6 +80,6 @@ export default function Layout({ children, home }) {
         </ul>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }

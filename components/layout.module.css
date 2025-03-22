@@ -1,10 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* fill at least the viewport */
+}
+
 .container {
-	display: flex;
-	flex-direction: column;
+  flex: 1;
   max-width: 48rem;
-	min-height: 60vh;
   padding: 0 1rem;
   margin: 1rem auto 4rem;
+}
+
+.homecontainer {
+  flex: 1;
+  max-width: 36rem;
+  padding: 0 2rem;
+  margin: 1rem auto 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {

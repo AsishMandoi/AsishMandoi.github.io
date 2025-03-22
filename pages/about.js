@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
 import { getPostData } from '../lib/posts'
 import utilStyles from '../styles/utils.module.css'
 
@@ -7,7 +7,7 @@ export default function About({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{`${siteTitle} - ${postData.title}`}</title>
       </Head>
       <article className={utilStyles.justifyText}>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>

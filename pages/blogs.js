@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Date from '../components/date'
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -18,7 +18,7 @@ export default function Blogs({ allPostsData }) {
   return (
     <Layout blogs>
       <Head>
-        <title>{"Blogs"}</title>
+        <title>{`${siteTitle} - Blogs`}</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingXl}>Blogs</h2>

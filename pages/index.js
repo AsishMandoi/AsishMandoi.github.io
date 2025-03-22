@@ -10,7 +10,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.intro}>
-        <p>Hello! I'm Asish, a senior undergraduate pursuing a Bachelor's degree in Electrical Engineering at the Indian Institute of Technology Kanpur. My interests lie in Software Engineering and Quantum Computing.</p>
+        <p>Hello, this is Asish! Nowadays, I'm a software engineer by day and in bed by night.</p>
       </section>
     </Layout>
   )
