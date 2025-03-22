@@ -28,6 +28,8 @@ export default function Layout({ children, home }) {
                 priority
                 src="/images/profile.webp"
                 quality={100}
+                placeholder='blur'
+                blurDataURL='eNFYDS={tR%Ms:~p-o%2%Lxtnj%LxuxZxuELoz-oRjkCn~WBR*R+Rj'
                 className={utilStyles.roundedSquare}
                 height={2126}
                 width={2126}
