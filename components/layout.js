@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
             <>
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/images/profile.webp"
                 quality={100}
                 className={utilStyles.roundedSquare}
                 height={2126}
@@ -41,7 +41,7 @@ export default function Layout({ children, home }) {
               <Link href="/">
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/profile.webp"
                   className={utilStyles.roundedSquare}
                   height={108}
                   width={108}
