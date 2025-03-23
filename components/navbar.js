@@ -26,7 +26,7 @@ export default function Navbar() {
       </ul>
       <ul className={styles.list2}>
         <li className={styles.social}>
-          <Link href={`https://www.linkedin.com/in/asish-mandoi-4178581b4/`}><div className={styles.img}><LinkedinIcon /></div></Link>
+          <Link href={`https://www.linkedin.com/in/asishmandoi/`}><div className={styles.img}><LinkedinIcon /></div></Link>
         </li>
         <li className={styles.social}>
           <Link href={`https://www.github.com/AsishMandoi`}><div className={styles.img}><GithubIcon /></div></Link>

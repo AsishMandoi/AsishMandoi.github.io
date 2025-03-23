@@ -1,21 +1,23 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* fill at least the viewport */
+  min-height: 100vh;
+  min-width: 320px;
 }
 
 .container {
   flex: 1;
+  width: 100%;
   max-width: 48rem;
   padding: 0 1rem;
-  margin: 1rem auto 4rem;
+  margin: 2rem auto 3rem;
 }
 
 .homecontainer {
   flex: 1;
-  max-width: 36rem;
-  padding: 0 2rem;
-  margin: 1rem auto 4rem;
+  max-width: 40rem;
+  padding: 0 2.5rem;
+  margin: 2rem auto 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,11 +42,8 @@
 
 /* Hide element on Tablet/Phone */
 @media only screen and (max-width: 560px) {
-  .container {
-    min-height: 70vh;
-  }
   .links {
-    margin: auto auto 0;
+    margin: auto auto 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
