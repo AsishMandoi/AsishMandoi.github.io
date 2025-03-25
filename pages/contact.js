@@ -16,7 +16,7 @@ export default function Contact() {
             <li className={utilStyles.listItem}>
               <div id='contact-item'><a href="mailto:asishmandoi20@gmail.com">Email</a></div>
               <small id='contact-text'>
-                You can reach me at "asishmandoi20@gmail.com".
+                You can reach me at <code>asishmandoi20@gmail.com</code>.
               </small>
             </li>
             <li className={utilStyles.listItem}>
