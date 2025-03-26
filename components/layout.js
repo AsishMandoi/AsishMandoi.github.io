@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,13 +21,7 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.jpg" />
           <meta name="author" content={name} />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-6P2424X2JD" />
-          <script dangerouslySetInnerHTML={{ __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-6P2424X2JD');
-          `}} />
+          <GoogleAnalytics gaId="G-6P2424X2JD" />
         </Head>
         <header className={styles.header}>
           {home ? (
