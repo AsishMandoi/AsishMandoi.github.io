@@ -22,11 +22,8 @@ export default function Layout({ children, home }) {
           <meta name="image" property="og:image" content="/images/preview-image.jpg" />
           <meta name="author" content={name} />
         </Head>
-        <Script
-          strategy="afterInteractive"
-          async src={`https://www.googletagmanager.com/gtag/js?id=G-6P2424X2JD`}
-        />
-        <Script id="ga-script" strategy="afterInteractive">
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=G-6P2424X2JD`} />
+        <Script id="ga-script">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
