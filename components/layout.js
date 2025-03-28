@@ -6,6 +6,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Footer from './footer'
 import Navbar from './navbar'
+import Navlist from './navlist'
 
 const name = 'Asish Mandoi'
 export const siteTitle = name
@@ -14,7 +15,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.page}>
       { <Navbar />}
-      <div className={`${home ? styles.homecontainer : styles.container}`}>
+      <div className={`${styles.container} ${home ? styles.home: ''}`}>
         <Head>
           <link rel="icon" href="/images/favicon.ico" />
           <meta name="description" content="A website designed and built using Nextjs by Asish Mandoi" />
@@ -52,7 +53,7 @@ export default function Layout({ children, home }) {
             </>
           ) : (
             <>
-              <Link href="/">
+              <Link href="/" className={utilStyles.imageBg}>
                 <Image
                   priority
                   src="/images/profile.webp"
@@ -63,7 +64,7 @@ export default function Layout({ children, home }) {
                 />
               </Link>
               {/* <Link href="/" className={utilStyles.colorInherit}>
-                <h2 className={utilStyles.headingLg}>{name}</h2>
+                <h2 className={utilStyles.headingLrg}>{name}</h2>
               </Link> */}
             </>
           )}
@@ -77,22 +78,7 @@ export default function Layout({ children, home }) {
           </div>
         )} */}
       </div>
-      <section className={styles.links}>
-        <ul className={utilStyles.list}>
-          <li>
-            <Link href={`/about`}><h2 className={utilStyles.textMd}>About</h2></Link>
-          </li>
-          <li>
-            <Link href="/cv.pdf"><h2 className={utilStyles.textMd}>CV</h2></Link>
-          </li>
-          <li>
-            <Link href="/blogs"><h2 className={utilStyles.textMd}>Blogs</h2></Link>
-          </li>
-          <li>
-            <Link href="/contact"><h2 className={utilStyles.textMd}>Contact</h2></Link>
-          </li>
-        </ul>
-      </section>
+      <Navlist />
       <Footer />
     </div>
   );

@@ -58,13 +58,20 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: #0077ff;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
   color: #52b2f2;
+  background-color: #c9e9ff;
+  border-radius: .175rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover img {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 main {
@@ -101,7 +108,7 @@ nav a {
 }
 
 footer {
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
   text-align: center;
   color: #505050;
   font-size: small;
@@ -111,6 +118,31 @@ footer {
 footer a {
   color: #505050;
   text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #ccc;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bbb;
+  transition: background-color 0.2s ease;
 }
 
 #contact-item {

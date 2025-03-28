@@ -14,21 +14,22 @@
   margin: 1rem 0;
 }
 
-.headingLg {
+.headingLrg {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
 }
 
-.headingMd {
+.headingMed {
   font-size: 1.2rem;
   line-height: 1.5;
+  margin: 0.5rem auto;
+  font-weight: 600;
 }
 
-.textMd {
+.textMed {
   font-size: 1.2rem;
   line-height: 1.5;
-  font-weight: 600;
 }
 
 .borderCircle {
@@ -37,6 +38,10 @@
 
 .roundedSquare {
   border-radius: 36px;
+}
+
+.imageBg:hover {
+  background-color: transparent;
 }
 
 .colorInherit {
@@ -71,6 +76,36 @@
   line-height: 1.4;
   font-weight: 300;
   text-align: center;
+}
+
+.form {
+  margin: 2rem 0;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formField {
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.formField span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: red;
+}
+
+.sendStatus {
+  margin-top: 1rem;
+}
+
+.separator {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #808080;
+  user-select: none;
 }
 
 .name {

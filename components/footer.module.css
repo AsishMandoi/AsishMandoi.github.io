@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   margin: auto;
-  padding: 75px 0;
+  padding: 4.5rem 0;
 }
 
 .list {
@@ -15,12 +15,12 @@
   list-style: none;
 }
 
-.listItem1 {
+.listItemLeft {
   padding-right: 5px;
   margin-left: auto;
 }
 
-.listItem2 {
+.listItemRight {
   padding-left: 5px;
   margin-right: auto;
 }

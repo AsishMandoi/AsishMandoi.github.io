@@ -6,12 +6,12 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <ul className={styles.list}>
-        <li className={styles.listItem1}>
+        <li className={styles.listItemLeft}>
           <Link href='https://www.linkedin.com/in/asish-mandoi-4178581b4/'><div className={styles.img}>
             <LinkedinIcon />
           </div></Link>
         </li>
-        <li className={styles.listItem2}>
+        <li className={styles.listItemRight}>
           <Link href='https://github.com/AsishMandoi'><div className={styles.img}>
             <GithubIcon />
           </div></Link>

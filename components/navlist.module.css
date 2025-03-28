@@ -1,0 +1,27 @@
+
+.navlist {
+  display: none;
+}
+
+.navlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem auto;
+}
+
+.navlist ul li {
+  margin: 0.75rem auto;
+  font-weight: 600;
+}
+
+/* Hide element on Tablet/Phone */
+@media only screen and (max-width: 560px) {
+  .navlist {
+    display: flex;
+    margin: auto auto 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+}

@@ -9,15 +9,12 @@
   flex: 1;
   width: 100%;
   max-width: 48rem;
-  padding: 0 1rem;
-  margin: 2rem auto 3rem;
+  padding: 1rem;
+  margin: 1rem auto 2.5rem;
 }
 
-.homecontainer {
-  flex: 1;
-  max-width: 40rem;
-  padding: 0 2.5rem;
-  margin: 2rem auto 3rem;
+.container.home {
+  max-width: 37rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,18 +33,9 @@
   vertical-align: bottom;
 }
 
-.links {
-  display: none;
-}
-
 /* Hide element on Tablet/Phone */
 @media only screen and (max-width: 560px) {
-  .links {
-    margin: auto auto 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
+  .container {
+    margin: 2.5rem auto 1rem;
   }
 }
