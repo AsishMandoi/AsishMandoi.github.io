@@ -36,8 +36,8 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.jpg" />
           <meta name="author" content={name} />
-          <GoogleAnalytics gaId="G-6P2424X2JD" />
         </Head>
+        <GoogleAnalytics gaId="G-6P2424X2JD" />
         <header className={styles.header}>
           {home ? (
             <>
