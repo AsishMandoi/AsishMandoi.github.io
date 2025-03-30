@@ -7,17 +7,18 @@
 
 .container {
   flex: 1;
+  margin: auto;
+  padding: 2rem;
   width: 100%;
   max-width: 48rem;
-  padding: 2rem;
-  margin: 1rem auto 2.5rem;
 }
 
 .container.home {
-  max-width: 37rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 4rem auto auto;
+  max-width: 36rem;
 }
 
 .header {
@@ -26,6 +27,51 @@
   align-items: center;
   color: black;
   padding: 1rem;
+}
+
+.quote {
+  padding: 1.5rem 2.5rem;
+  margin: 0 auto 2rem;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.quote > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  padding: 0 2rem;
+  margin: auto;
+  width: 100%;
+  max-width: inherit;
+}
+
+.quote > p:before, .quote > p:after {
+  position: absolute;
+  top: -5px;
+  font-size: 3.5rem;
+  color: #ccc;
+  line-height: 1;
+}
+
+.quote > p:before {
+  content: "“";
+  left: 0;
+}
+
+.quote > p:after {
+  content: "”";
+  right: 0;
+}
+
+.spoiler {
+  color: transparent;
+  transition: color 0.2s ease;
+}
+
+.quote:hover .spoiler {
+  color: inherit;
+  transition: color 0.5s ease;
 }
 
 .returnHome {
@@ -37,7 +83,10 @@
 /* Hide element on Tablet/Phone */
 @media only screen and (max-width: 560px) {
   .container {
-    margin: 2.5rem auto auto;
+    margin: 2rem auto auto;
     text-align: center;
+  }
+  .quote {
+    margin: 0 auto;
   }
 }

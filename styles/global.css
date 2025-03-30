@@ -78,22 +78,20 @@ a:hover img {
   transition: opacity 0.2s ease;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+pre, code {
   font-family: 'Geist Mono', monospace;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+pre {
+  padding: 10px;
+  border-radius: 5px;
   white-space: pre-wrap;
 }
-
 code {
-  background-color: #eee;
   padding: .12em .20em;
   border-radius: .375rem;
   line-height: 1.2;
-  font-family: 'Geist Mono', monospace;
-  border: 1px solid #ccc;
 }
 
 nav {
@@ -145,46 +143,14 @@ button:hover {
   transition: background-color 0.2s ease;
 }
 
-p#li {
-  margin-top: 0;
-}
-
 form#contact {
   margin: 1.5rem 0;
 }
 
 blockquote {
   font-family: 'EB Garamond', serif;
-  margin: 4.5rem auto auto;
-  width: 80%;
-  font-size: 1.6rem;
-  line-height: 2;
-  text-align: inherit;
-  font-weight: inherit;
-}
-blockquote > p#quote {
-  position: relative;
-  padding: 0 30px; /* leave space for the quote */
 }
 
-blockquote > p#quote:before, blockquote > p#quote:after {
-  position: absolute;
-  top: -5px;
-  font-size: 3.5rem;
-  color: #ccc;
-  line-height: 1;
-}
-
-blockquote > p#quote:before {
-  content: "“";
-  left: 0;
-}
-
-blockquote > p#quote:after {
-  content: "”";
-  right: 0;
-}
-
-blockquote > p {
-  display:inline;
+p#li {
+  margin-top: 0;
 }

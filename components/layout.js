@@ -11,6 +11,19 @@ import Navlist from './navlist'
 const name = 'Asish Mandoi'
 export const siteTitle = name
 
+const quotes = {
+  quote: [
+    "There is no gene for the human spirit.",
+    "The only way to do great work is to love what you do.",
+    "Bad art is more tragically beautiful than good art because it documents human failure."
+  ],
+  source: [
+    "Gattaca (1997)",
+    "Steve Jobs",
+    "Tristan Rêveur"
+  ],
+}
+
 export default function Layout({ children, home }) {
   return (
     <div className={styles.page}>
@@ -72,12 +85,18 @@ export default function Layout({ children, home }) {
         <main>{children}</main>
         {/* {!home && (
           <div className={styles.returnHome}>
-            <Link href="/">
-              « Return home
-            </Link>
+          <Link href="/">
+          « Return home
+          </Link>
           </div>
-        )} */}
+          )} */}
       </div>
+      <blockquote className={styles.quote}>
+        <p id='quote'><i>{quotes.quote[home?0:2]}</i></p>
+        <span className={styles.spoiler}>
+          <p id='source'> — {quotes.source[home?0:2]}</p>
+        </span>
+      </blockquote>
       <Navlist />
       <Footer />
     </div>
