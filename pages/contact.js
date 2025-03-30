@@ -45,70 +45,71 @@ export default function Contact() {
       <Head>
         <title>{`${siteTitle} - Contact`}</title>
       </Head>
-      <section className={`${utilStyles.textMed} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingXl}>Contact</h2>
-        <ul className={utilStyles.list}>
-            <li className={utilStyles.listItem}>
-              <div id='contact-item'><a href="mailto:asishmandoi20@gmail.com">Email</a></div>
-              <small id='contact-text'>
-                You can reach me at <code>asishmandoi20@gmail.com</code>.
-              </small>
-            </li>
-            <li className={utilStyles.listItem}>
-              <div id='contact-item'><a href={`https://www.linkedin.com/in/asishmandoi/`}>LinkedIn</a></div>
-              <small id='contact-text'>
-                Send me a connection request if we are not connected.
-              </small>
-            </li>
-        </ul>
-        <div className={utilStyles.separator}>-</div>
-        <form onSubmit={handleSubmit} className={utilStyles.form}>
-          <div className={utilStyles.headingMed}>Get in touch!</div>
-          <div className={utilStyles.formField}>
-            <input 
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required 
-              placeholder="Name"
-            />
-            <span>*</span>
-          </div>
-          <div className={utilStyles.formField}>
-            <input 
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Email"
-            />
-            <span>*</span>
-          </div>
-          <div className={utilStyles.formField}>
-            <input
-              type="text"
-              name="referral"
-              value={formData.referral}
-              onChange={handleChange}
-              placeholder="How did you hear about me?"
-            />
-          </div>
-          <div className={utilStyles.formField}>
-            <textarea 
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="How can I help?"
-              rows="5"
-            />
-            <span>*</span>
-          </div>
-          <button type="submit">Submit</button>
-          {status && <p className={utilStyles.sendStatus}>{status}</p>}
-        </form>
+      <h2 className={utilStyles.headingXl}>Contact</h2>
+      <section /* className={utilStyles.columns} */>
+        <div className={utilStyles.column1}>
+          <ul className={utilStyles.list}>
+              <li className={utilStyles.listItem}>
+                <div className={utilStyles.textMed}><a href="mailto:asishmandoi20@gmail.com">Email</a></div>
+                <p id='li'>You can reach me at <code>asishmandoi20@gmail.com</code>.</p>
+              </li>
+              <li className={utilStyles.listItem}>
+                <div className={utilStyles.textMed}><a href={`https://www.linkedin.com/in/asishmandoi/`}>LinkedIn</a></div>
+                <p id='li'>Send me a connection request if we are not connected.</p>
+              </li>
+          </ul>
+        </div>
+        {/* <hr className={utilStyles.hSeparator}/> */}
+        <vl className={utilStyles.vSeparator}/>
+        <div className={utilStyles.column2}>
+          <form onSubmit={handleSubmit} id='contact' className={utilStyles.form}>
+            <div className={utilStyles.headingMed}>All thoughts are welcome!</div>
+            <div className={utilStyles.formField}>
+              <input 
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required 
+                placeholder="Name"
+              />
+              <span>*</span>
+            </div>
+            <div className={utilStyles.formField}>
+              <input 
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="Email"
+              />
+              <span>*</span>
+            </div>
+            <div className={utilStyles.formField}>
+              <input
+                type="text"
+                name="referral"
+                value={formData.referral}
+                onChange={handleChange}
+                placeholder="How did you hear about me?"
+              />
+            </div>
+            <div className={utilStyles.formField}>
+              <textarea 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="What do you have in mind?"
+                rows="5"
+              />
+              <span>*</span>
+            </div>
+            <button type="submit">Submit</button>
+            {status && <p className={utilStyles.sendStatus}>{status}</p>}
+          </form>
+        </div>
       </section>
     </Layout>
   )

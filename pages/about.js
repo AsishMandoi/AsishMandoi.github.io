@@ -9,8 +9,8 @@ export default function About({ postData }) {
       <Head>
         <title>{`${siteTitle} - ${postData.title}`}</title>
       </Head>
+      <h1 className={utilStyles.headingXl}>{postData.title}</h1>
       <article className={utilStyles.justifyText}>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>

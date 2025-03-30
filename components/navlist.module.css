@@ -6,11 +6,12 @@
 .navlist ul {
   list-style: none;
   padding: 0;
-  margin: 2.5rem auto;
+  margin: 1.5rem;
 }
 
 .navlist ul li {
   margin: 0.75rem auto;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -18,7 +19,7 @@
 @media only screen and (max-width: 560px) {
   .navlist {
     display: flex;
-    margin: auto auto 1rem;
+    margin-bottom: 1.5rem;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;

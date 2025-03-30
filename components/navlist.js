@@ -6,7 +6,7 @@ import { serializeUseCacheCacheStore } from 'next/dist/server/resume-data-cache/
 export default function Navlist() {
   return (
     <section className={styles.navlist}>
-      <div className={utilStyles.separator}>---</div>
+      <hr className={utilStyles.hSeparator}/>
       <ul>
         <li>
           <Link href={`/about`}>About</Link>

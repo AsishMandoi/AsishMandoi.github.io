@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
       <div className={`${styles.container} ${home ? styles.home: ''}`}>
         <Head>
           <link rel="icon" href="/images/favicon.ico" />
-          <meta name="description" content="A website designed and built using Nextjs by Asish Mandoi" />
+          <meta name="description" content="A website powered by Nextjs, designed and built by Asish Mandoi" />
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.jpg" />
           <meta name="author" content={name} />

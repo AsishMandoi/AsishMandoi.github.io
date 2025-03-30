@@ -20,15 +20,14 @@ export default function Blogs({ allPostsData }) {
       <Head>
         <title>{`${siteTitle} - Blogs`}</title>
       </Head>
-      <section className={`${utilStyles.textMed} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingXl}>Blogs</h2>
-        <small><i>Nothing here yet... Please come back later.</i></small>
+      <h2 className={utilStyles.headingXl}>Blogs</h2>
+      <section>
+        <p><i>Nothing here yet... Please come back later.</i></p>
       </section>
       
       {/* Comment the above section and uncomment the following section and add blog posts */}
 
-      {/* <section className={`${utilStyles.textMed} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingXl}>Blogs</h2>
+      {/* <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -36,9 +35,9 @@ export default function Blogs({ allPostsData }) {
                 {title}
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <p className={utilStyles.lightText}>
                 <Date dateString={date} />
-              </small>
+              </p>
             </li>          
           ))}
         </ul>

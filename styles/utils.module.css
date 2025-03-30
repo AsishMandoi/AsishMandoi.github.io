@@ -1,3 +1,19 @@
+/* FONT PROPS */
+/* ---------- */
+
+.name {
+  margin: 0 0.2rem 0 0.2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.intro {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-align: center;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -30,7 +46,11 @@
 .textMed {
   font-size: 1.2rem;
   line-height: 1.5;
+  font-weight: 600;
 }
+
+/* IMAGE PROPS */
+/* ---------- */
 
 .borderCircle {
   border-radius: 9999px;
@@ -48,9 +68,8 @@
   color: inherit;
 }
 
-.padding1px {
-  padding-top: 1px;
-}
+/* LAYOUT PROPS */
+/* ------------ */
 
 .list {
   list-style: none;
@@ -59,7 +78,7 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .lightText {
@@ -71,17 +90,12 @@
   line-height: 1.5;
 }
 
-.intro p {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  font-weight: 300;
-  text-align: center;
-}
-
 .form {
-  margin: 2rem 0;
+  min-width: 0.8em;
+  width: 100%;
   font-family: inherit;
   font-size: 1rem;
+  /* border: 1px solid #ccc; */
 }
 
 .formField {
@@ -101,15 +115,77 @@
   margin-top: 1rem;
 }
 
-.separator {
-  font-size: 1.75rem;
-  text-align: center;
-  color: #808080;
-  user-select: none;
+/* 2 Columns separated by a vertical line */
+/* -------------------------------------- */
+.columns {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  /* padding: 0.5rem; */
+  /* border: 1px solid #ccc; */
 }
 
-.name {
-  margin: 0 0.2rem 0 0.2rem;
-  font-size: 1.8rem;
-  font-weight: 800;
+.column1 {
+  order: 1;
+  flex: 1;
+  margin-top: 1.5rem;
+  /* border: 1px solid #ccc; */
+}
+.column2 {
+  order: 3;
+  flex: 2;
+  /* border: 1px solid #ccc; */
+}
+
+.columns .vSeparator {
+  display: block;
+  order: 2;
+  width: 1px;
+  max-width: 1px;
+  border: none;
+  border-left: 1px solid #ccc;
+  align-self: center;
+  height: 15rem;
+  margin: 0 2rem;
+}
+
+.hSeparator {
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+  .columns {
+    display: block;
+    flex-direction: column;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+
+  .column2 {
+    width: 100%;
+  }
+
+  .columns .vSeparator {
+    display: none;
+  }
+
+  .hSeparator {
+    display: block;
+    width: 45%;
+    max-width: 84vw;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  .columns .hSeparator {
+    width: 100%;
+    margin: 2rem auto;
+  }
 }

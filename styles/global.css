@@ -5,43 +5,47 @@
 @import url('../public/fonts/computer-modern/serif.css');
 @import url('../public/fonts/computer-modern/typewriter.css'); */
 
-/* AMATIC SC */
+/* Amatic SC */
 /* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Delius&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Sora:wght@100;200;300;400;500;600;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'); */
 
-/* SOURCE PRO */
+/* Source Sans Pro */
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'); */
 /* @import url('../public/fonts/source-pro/source-serif-pro.css'); */
 
-/* HELVETICA NEUE */
+/* Helvetica Neue */
 /* @import url('../public/fonts/helvetica-neue/helvetica-neue.css'); */
 
-/* HELVETICA */
+/* Helvetica */
 /* @import url('https://fonts.googleapis.com/css2?family=Helvetica:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
 
-/* ROBOTO */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+/* Roboto */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
-/* NIMBUS SANS */
+/* Nimbus Sans L */
 /* @import url('../public/fonts/nimbus-sans/nimbus-sans.css'); */
 
-/* LATO */
+/* Lato */
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
 
-/* JETBRAINS MONO */
+/* JetBrains Mono */
 /* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono'); */
 
-/* MERRIWEATHER */
+/* Merriweather */
 /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); */
 
-/* MONTSERRAT */
+/* Montserrat */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
-/* WORK SANS */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Work Sans */
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
-/* GEIST MONO */
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Geist Mono */
+/* @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* Replace active.css with css properties of the required font combination */
+/* Current active font: Work Sans + Geist Mono */
+@import url('../public/fonts/active.css');
 
 html,
 body {
@@ -50,7 +54,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   line-height: 1.6;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.075rem;
 }
 
 * {
@@ -64,7 +68,7 @@ a {
 
 a:hover {
   color: #52b2f2;
-  background-color: #c9e9ff;
+  background-color: #c9eaff;
   border-radius: .175rem;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
@@ -74,12 +78,8 @@ a:hover img {
   transition: opacity 0.2s ease;
 }
 
-main {
-  padding: 0 1.5rem;
-}
-
 pre {
-  background-color: #f0f0f0;
+  background-color: #eee;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -88,7 +88,7 @@ pre {
 }
 
 code {
-  background-color: #f0f0f0;
+  background-color: #eee;
   padding: .12em .20em;
   border-radius: .375rem;
   line-height: 1.2;
@@ -103,20 +103,20 @@ nav {
 }
 
 nav a {
-  color: #000000;
+  color: #000;
   margin: 0;
 }
 
 footer {
-  background-color: #f0f0f0;
+  background-color: #eee;
   text-align: center;
-  color: #505050;
+  color: #555;
   font-size: small;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 footer a {
-  color: #505050;
+  color: #555;
   text-decoration: none;
 }
 
@@ -145,11 +145,46 @@ button:hover {
   transition: background-color 0.2s ease;
 }
 
-#contact-item {
-  font-weight: 600;
+p#li {
+  margin-top: 0;
 }
 
-#contact-text {
-  text-align: justify;
-  line-height: 1.5;
+form#contact {
+  margin: 1.5rem 0;
+}
+
+blockquote {
+  font-family: 'EB Garamond', serif;
+  margin: 4.5rem auto auto;
+  width: 80%;
+  font-size: 1.6rem;
+  line-height: 2;
+  text-align: inherit;
+  font-weight: inherit;
+}
+blockquote > p#quote {
+  position: relative;
+  padding: 0 30px; /* leave space for the quote */
+}
+
+blockquote > p#quote:before, blockquote > p#quote:after {
+  position: absolute;
+  top: -5px;
+  font-size: 3.5rem;
+  color: #ccc;
+  line-height: 1;
+}
+
+blockquote > p#quote:before {
+  content: "“";
+  left: 0;
+}
+
+blockquote > p#quote:after {
+  content: "”";
+  right: 0;
+}
+
+blockquote > p {
+  display:inline;
 }

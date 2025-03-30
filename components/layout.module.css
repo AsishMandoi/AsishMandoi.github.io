@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 320px;
+  min-width: 350px;
 }
 
 .container {
   flex: 1;
   width: 100%;
   max-width: 48rem;
-  padding: 1rem;
+  padding: 2rem;
   margin: 1rem auto 2.5rem;
 }
 
@@ -25,6 +25,7 @@
   flex-direction: column;
   align-items: center;
   color: black;
+  padding: 1rem;
 }
 
 .returnHome {
@@ -36,6 +37,7 @@
 /* Hide element on Tablet/Phone */
 @media only screen and (max-width: 560px) {
   .container {
-    margin: 2.5rem auto 1rem;
+    margin: 2.5rem auto auto;
+    text-align: center;
   }
 }
