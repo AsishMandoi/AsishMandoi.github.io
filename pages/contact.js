@@ -41,7 +41,7 @@ export default function Contact() {
   }
 
   return (
-    <Layout contact>
+    <Layout page="contact">
       <Head>
         <title>{`${siteTitle} - Contact`}</title>
       </Head>

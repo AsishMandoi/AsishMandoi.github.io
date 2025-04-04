@@ -1,6 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head'
-import Script from 'next/script'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './layout.module.css'
@@ -12,20 +11,26 @@ import Navlist from './navlist'
 const name = 'Asish Mandoi'
 export const siteTitle = name
 
-const quotes = {
-  quote: [
-    "There is no gene for the human spirit.",
-    "The only way to do great work is to love what you do.",
-    "Bad art is more tragically beautiful than good art because it documents human failure."
-  ],
-  source: [
-    "Gattaca (1997)",
-    "Steve Jobs",
-    "Tristan Rêveur"
-  ],
-}
+const quoteMap = {
+  about: {
+    quote: "There is no gene for the human spirit.",
+    source: "Gattaca (1997)"
+  },
+  blogs: {
+    quote: "Bad art is more tragically beautiful than good art because it documents human failure.",
+    source: "Tristan Rêveur"
+  },
+  contact: {
+    quote: "If you want to go fast, go alone. If you want to go far, go together.",
+    source: "African proverb"
+  },
+  default: {
+    quote: "The only way to do great work is to love what you do.",
+    source: "Steve Jobs"
+  }
+};
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, page }) {
   return (
     <div className={styles.page}>
       { <Navbar />}
@@ -76,18 +81,18 @@ export default function Layout({ children, home }) {
         <main>{children}</main>
         {/* {!home && (
           <div className={styles.returnHome}>
-          <Link href="/">
-          « Return home
-          </Link>
+            <Link href="/">« Return home</Link>
           </div>
-          )} */}
+        )} */}
       </div>
-      <blockquote className={styles.quote}>
-        <p id='quote'><i>{quotes.quote[home?0:2]}</i></p>
-        <span className={styles.spoiler}>
-          <p id='source'> — {quotes.source[home?0:2]}</p>
-        </span>
-      </blockquote>
+      {!home && (
+        <blockquote className={styles.quote}>
+          <p id='quote'><i>{page ? quoteMap[page].quote : quoteMap.default.quote}</i></p>
+          <span className={styles.spoiler}>
+            <p id='source'> — {page ? quoteMap[page].source : quoteMap.default.source}</p>
+          </span>
+        </blockquote>
+      )}
       <Navlist />
       <Footer />
     </div>

@@ -93,6 +93,9 @@ code {
   border-radius: .375rem;
   line-height: 1.2;
 }
+pre code {
+  all: unset;
+}
 
 nav {
   justify-content: space-between;
@@ -149,6 +152,8 @@ form#contact {
 
 blockquote {
   font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 p#li {

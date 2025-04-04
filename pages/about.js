@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 
 export default function About({ postData }) {
   return (
-    <Layout>
+    <Layout page="about">
       <Head>
         <title>{`${siteTitle} - ${postData.title}`}</title>
       </Head>
