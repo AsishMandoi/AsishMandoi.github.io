@@ -19,15 +19,16 @@ const quoteMap = {
   blogs: {
     quote: "Bad art is more tragically beautiful than good art because it documents human failure.",
     source: "Tristan Rêveur"
-  },
-  contact: {
-    quote: "If you want to go fast, go alone. If you want to go far, go together.",
-    source: "African proverb"
-  },
-  default: {
-    quote: "The only way to do great work is to love what you do.",
-    source: "Steve Jobs"
   }
+  // ,
+  // contact: {
+  //   quote: "If you want to go fast, go alone. If you want to go far, go together.",
+  //   source: "African proverb"
+  // },
+  // default: {
+  //   quote: "The only way to do great work is to love what you do.",
+  //   source: "Steve Jobs"
+  // }
 };
 
 export default function Layout({ children, home, page }) {
@@ -39,7 +40,7 @@ export default function Layout({ children, home, page }) {
           <link rel="icon" href="/images/favicon.ico" />
           <meta name="description" content="A website powered by Nextjs, designed and built by Asish Mandoi" />
           <meta name="og:title" content={siteTitle} />
-          <meta name="image" property="og:image" content="/images/preview-image.jpg" />
+          <meta name="image" property="og:image" content="/images/preview-image.png" />
           <meta name="author" content={name} />
         </Head>
         <GoogleAnalytics gaId="G-6P2424X2JD" />
@@ -85,11 +86,11 @@ export default function Layout({ children, home, page }) {
           </div>
         )} */}
       </div>
-      {!home && (
+      {!home && (page === 'about' || page === 'blogs') && (
         <blockquote className={styles.quote}>
-          <p id='quote'><i>{page ? quoteMap[page].quote : quoteMap.default.quote}</i></p>
+          <p id='quote'><i>{quoteMap[page].quote}</i></p>
           <span className={styles.spoiler}>
-            <p id='source'> — {page ? quoteMap[page].source : quoteMap.default.source}</p>
+            <p id='source'> — {quoteMap[page].source}</p>
           </span>
         </blockquote>
       )}

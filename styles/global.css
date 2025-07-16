@@ -82,6 +82,7 @@ pre, code {
   font-family: 'Geist Mono', monospace;
   background-color: #eee;
   border: 1px solid #ccc;
+  font-size: 92%;
 }
 pre {
   padding: 10px;
@@ -158,4 +159,19 @@ blockquote {
 
 p#li {
   margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+th {
+  background: #f8f8f8;
 }

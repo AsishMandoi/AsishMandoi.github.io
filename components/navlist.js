@@ -12,7 +12,7 @@ export default function Navlist() {
           <Link href={`/about`}>About</Link>
         </li>
         <li>
-          <Link href="/cv.pdf">CV</Link>
+          <Link href="/cv.pdf" target='_blank'>CV</Link>
         </li>
         <li>
           <Link href="/blogs">Blogs</Link>

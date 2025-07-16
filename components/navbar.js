@@ -14,7 +14,7 @@ export default function Navbar() {
           <Link href="/about">About</Link>
         </li>
         <li className={styles.navbarItem}>
-          <Link href="/cv.pdf">CV</Link>
+          <Link href="/cv.pdf" target='_blank'>CV</Link>
         </li>
         <li className={styles.navbarItem}>
           <Link href="/blogs">Blogs</Link>
