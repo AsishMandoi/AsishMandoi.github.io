@@ -17,7 +17,7 @@ export default function Footer() {
           </div></Link>
         </li>
       </ul>
-      © 2025 <Link href={'/'}>Asish Mandoi</Link>
+      © {new Date().getFullYear()} <Link href={'/'}>Asish Mandoi</Link>
     </footer>
   );
 }

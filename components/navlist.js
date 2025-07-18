@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from './navlist.module.css'
 import utilStyles from '../styles/utils.module.css'
-import { serializeUseCacheCacheStore } from 'next/dist/server/resume-data-cache/cache-store'
 
 export default function Navlist() {
   return (

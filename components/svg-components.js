@@ -1,4 +1,4 @@
-const GithubIcon = ({ props } ) => (
+const GithubIcon = (props) => (
   <svg
     aria-hidden="true"
     data-prefix="fab"
@@ -15,7 +15,7 @@ const GithubIcon = ({ props } ) => (
   </svg>
 )
 
-const LinkedinIcon = ({ props }) => (
+const LinkedinIcon = (props) => (
   <svg
     aria-hidden="true"
     data-prefix="fab"

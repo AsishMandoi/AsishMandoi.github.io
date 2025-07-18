@@ -21,12 +21,19 @@ export default function Contact() {
       setStatus("Sending" + ".".repeat(dots));
     }, 500);
     try {
-      const response = await fetch('/api/sendEmail', {
+      const source = `source: ${formData.referral ? formData.referral : 'unknown'}`;
+      const response = await fetch('https://formspree.io/f/asishmandoi20@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          referral: formData.referral,
+          message: formData.message,
+          _subject: `${formData.name} visited your website`,
+          _replyto: `${source}\n\n${formData.message}`,
+        })
       })
-      const result = await response.json();
       clearInterval(intervalId);
       if (response.ok) {
         setStatus('Message sent successfully!')
