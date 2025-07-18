@@ -3,6 +3,14 @@
   flex-direction: column;
   min-height: 100vh;
   min-width: 350px;
+  width: auto;
+}
+
+.page.post {
+  display: flex;
+  flex-direction: column;
+  min-width: 700px;
+  width: auto;
 }
 
 .container {

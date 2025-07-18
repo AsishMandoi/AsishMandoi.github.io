@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Layout, { siteTitle } from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
@@ -12,14 +13,25 @@ import rehypeRaw from 'rehype-raw'
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout isPost>
       <Head>
         <title>{`${siteTitle} - ${postData.title}`}</title>
       </Head>
       <h1 className={utilStyles.headingXl}>{postData.title}</h1>
       <article className={utilStyles.justifyText}>
-        <div className={utilStyles.lightText}>
+        <div className={`${utilStyles.lightText} ${utilStyles.mdMeta}`}>
           <Date dateString={postData.date} />
+          <span>&#9900;</span>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={`${utilStyles.license} ${utilStyles.imageBg}`} target="_blank">
+            <Image
+              priority
+              src="/images/CC_BY-NC-SA.svg"
+              className={utilStyles.roundedSquare}
+              alt="Creative Commons Licence"
+              width={88}
+              height={31}
+            />
+          </a>
         </div>
         <ReactMarkdown
           remarkPlugins={[remarkAlert, remarkMath, remarkGfm]}

@@ -16,7 +16,8 @@ export default function Footer() {
             <GithubIcon />
           </div></Link>
         </li>
-      </ul>© 2025 <Link href={'/'}>Asish Mandoi</Link>
+      </ul>
+      © 2025 <Link href={'/'}>Asish Mandoi</Link>
     </footer>
   );
 }

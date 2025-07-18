@@ -60,7 +60,7 @@ export default function Contact() {
           </ul>
         </div>
         {/* <hr className={utilStyles.hSeparator}/> */}
-        <vl className={utilStyles.vSeparator}/>
+        {/* <div className={utilStyles.vSeparator}/> */} {/* Uncomment this line and className={utilStyles.columns} in the section element for vertical separator */}
         <div className={utilStyles.column2}>
           <form onSubmit={handleSubmit} id='contact' className={utilStyles.form}>
             <div className={utilStyles.headingMed}>All thoughts are welcome!</div>

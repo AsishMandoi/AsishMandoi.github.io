@@ -85,6 +85,17 @@
   color: #666;
 }
 
+.mdMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.license {
+  display: flex;
+  align-items: center;
+}
+
 .justifyText {
   text-align: justify;
   line-height: 1.5;
