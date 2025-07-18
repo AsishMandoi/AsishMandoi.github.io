@@ -22,7 +22,7 @@ export default function Contact() {
     }, 500);
     try {
       const source = `source: ${formData.referral ? formData.referral : 'unknown'}`;
-      const response = await fetch('https://formspree.io/f/asishmandoi20@gmail.com', {
+      const response = await fetch('https://formspree.io/f/xldldpbj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
