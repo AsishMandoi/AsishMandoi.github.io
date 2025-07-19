@@ -20,28 +20,32 @@ export default function Contact() {
       dots = (dots + 1) % 4;
       setStatus("Sending" + ".".repeat(dots));
     }, 500);
-    try {
-      const source = `source: ${formData.referral ? formData.referral : 'unknown'}`;
-      const response = await fetch('https://formspree.io/f/xldldpbj', {
+    try {  
+      const submitData = { 
+        ...formData, 
+        access_key: "65345a01-0426-48a0-b2e1-d5e7c98059b4",
+        subject: `${formData.name} visited your website`,
+        from_name: formData.name,
+        referral: formData.referral || 'unknown'
+      };
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          referral: formData.referral,
-          message: formData.message,
-          _subject: `${formData.name} visited your website`,
-          _replyto: `${source}\n\n${formData.message}`,
-        })
+        body: JSON.stringify(submitData)
       })
+      
+      const result = await response.json();
       clearInterval(intervalId);
-      if (response.ok) {
+      
+      if (response.ok && result.success) {
         setStatus('Message sent successfully!')
         setFormData({ name: '', email: '', referral: '', message: '' })
       } else {
-        setStatus(`Message could not be sent. ${result.error}`)
+        setStatus(`Message could not be sent. ${result.message || 'Unknown error'}`)
       }
     } catch (err) {
+      console.error(err);
       clearInterval(intervalId);
       setStatus('An error occurred.')
     }
