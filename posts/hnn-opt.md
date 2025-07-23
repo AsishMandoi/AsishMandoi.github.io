@@ -217,40 +217,41 @@ Source of Max-Cut data: [biqbin.eu/MaxCut](http://biqbin.eu/Home/Benchmarks)
 
 ### Baseline
 
-| dataset      | optimal solution energy | obtained solution energy | time to solution (s) |
-|:------------ |:-----------------------:|:------------------------:|:--------------------:|
-| mc_21_199    |          109            |           107            |        3.13          |
-| mc_50_156    |         1762            |          1758            |        3.80          |
-| mc_63_1729   |          956            |           956            |        4.62          |
-| mc_100_242   |          197            |           192            |        5.00          |
-| mc_101_5006  |         4322            |          4322            |        4.87          |
-| mc_800_4667  |         3044            |          2782            |      170.13          |
+| dataset      | optimal (or approx.) solution energy | obtained solution energy | time to solution (s) |
+|:------------ |:------------------------------------:|:------------------------:|:--------------------:|
+| mc_21_199    |                 109                  |           109            |        3.13          |
+| mc_50_156    |                1762                  |          1762            |        3.80          |
+| mc_63_1729   |                 956                  |           956            |        4.62          |
+| mc_100_242   |                 197                  |           197            |        5.00          |
+| mc_101_5006  |                4322                  |          4322            |        4.87          |
+| mc_800_4667  |                3044                  |          2786            |      170.13          |
 <br>
 
 ### Stochastic Annealing
 
-| dataset      | optimal solution energy | obtained solution energy | time to solution (s) |
-|:------------ |:-----------------------:|:------------------------:|:--------------------:|
-| mc_21_199    |          109            |           109            |        12.89         |
-| mc_50_156    |         1762            |          1758            |        13.56         |
-| mc_63_1729   |          956            |           956            |        13.51         |
-| mc_100_242   |          197            |           192            |        15.72         |
-| mc_101_5006  |         4322            |          4322            |        14.87         |
-| mc_800_4667  |         3044            |          2786*           |       346.11         |
+| dataset      | optimal (or approx.) solution energy | obtained solution energy | time to solution (s) |
+|:------------ |:------------------------------------:|:------------------------:|:--------------------:|
+| mc_21_199    |                 109                  |           109            |        12.89         |
+| mc_50_156    |                1762                  |          1762            |        13.56         |
+| mc_63_1729   |                 956                  |           956            |        13.51         |
+| mc_100_242   |                 197                  |           197            |        15.72         |
+| mc_101_5006  |                4322                  |          4322            |        14.87         |
+| mc_800_4667  |                3044                  |          2786*           |       346.11         |
 <br>
 
 ### Exponential Annealing
 
-| dataset      | optimal (or approx.) solution | obtained solution | time to solution (s) |
-|:------------ |:-----------------------------:|:-----------------:|:--------------------:|
-| mc_21_199    |            109                |       109         |        4.25          |
-| mc_50_156    |           1762                |      1710         |        9.98          |
-| mc_63_1729   |            956                |       956         |       10.97          |
-| mc_100_242   |            197                |       192         |       13.12          |
-| mc_101_5006  |           4322                |      4322         |       12.69          |
-| mc_800_4667  |           3044                |      2881*        |      357.67          |
+| dataset      | optimal (or approx.) solution energy | obtained solution energy | time to solution (s) |
+|:------------ |:------------------------------------:|:------------------------:|:--------------------:|
+| mc_21_199    |                 109                  |           109            |         4.25         |
+| mc_50_156    |                1762                  |          1762            |         9.98         |
+| mc_63_1729   |                 956                  |           956            |        10.97         |
+| mc_100_242   |                 197                  |           197            |        13.12         |
+| mc_101_5006  |                4322                  |          4322            |        12.69         |
+| mc_800_4667  |                3044                  |          2881*           |       357.67         |
 
 \* denotes a higher number of steps applied because of the large dataset.
+For more details on the simulations and results, refer to the [GitHub repository](https://github.com/AsishMandoi/mem-HNNs).
 
 ---
 ## Future Scope
