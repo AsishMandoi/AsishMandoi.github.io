@@ -250,7 +250,7 @@ Source of Max-Cut data: [biqbin.eu/MaxCut](http://biqbin.eu/Home/Benchmarks)
 | mc_101_5006  |                4322                  |          4322            |        12.69         |
 | mc_800_4667  |                3044                  |          2881*           |       357.67         |
 
-\* denotes a higher number of steps applied because of the large dataset.
+\* denotes a higher number of steps applied because of the large dataset.<br>
 For more details on the simulations and results, refer to the [GitHub repository](https://github.com/AsishMandoi/mem-HNNs).
 
 ---

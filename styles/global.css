@@ -1,11 +1,18 @@
-/* Edit active.css with css properties of the required font combination */
-/* Current active font: Work Sans + Fira Code + EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+#fonts {
+  --font-sans: var(--next-sans), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif;
+  --font-serif: var(--next-serif), Georgia, Cambria, Times, serif;
+  --font-mono: var(--next-mono), ui-monospace, Consolas, Courier, monospace;
+  --font-wild: "Bitcount Grid Single", var(--font-mono);
+}
 
 html,
-body {
+body,
+#fonts {
   padding: 0;
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
   font-weight: 300;
   font-size: 1.075rem;
@@ -33,7 +40,7 @@ a:hover img {
 }
 
 pre, code {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-mono);
   background-color: #eee;
   border: 1px solid #ccc;
   font-size: 92%;
@@ -53,7 +60,7 @@ pre code {
 }
 
 code#flashy {
-  font-family: 'Bitcount Grid Single', monospace;
+  font-family: var(--font-wild);
 }
 
 nav {
@@ -110,7 +117,7 @@ form#contact {
 }
 
 blockquote {
-  font-family: 'EB Garamond', serif;
+  font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 400;
 }

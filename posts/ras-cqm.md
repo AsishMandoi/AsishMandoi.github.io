@@ -42,7 +42,7 @@ Given `n` clients and `m` vehicles (starting/ending at a depot), find routes for
 
 #### Objective
 ```
-minimize(sum(cost[i][j] * x[i][j] for all i ≠ j))
+minimize(sum(cost[i][j] * x[i][j] for all i != j))
 ```
 $$
 \text{min}\left(\sum_{i \neq j} C_{ij} \cdot x_{ij}\right)
@@ -53,8 +53,8 @@ $$
 ```
 # Each client must have exactly one outgoing and one incoming edge
 
-sum(x[i][j] for j ≠ i) == 1      # Outgoing from client i
-sum(x[j][i] for j ≠ i) == 1      # Incoming to client i
+sum(x[i][j] for j != i) == 1      # Outgoing from client i
+sum(x[j][i] for j != i) == 1      # Incoming to client i
 ```
 $$
 \sum_{j \neq i} x_{ij} = 1
@@ -91,7 +91,7 @@ $$
 
 y[i][k] - y[j][k] + (1 - x[i][j]) >= 0
 y[j][k] - y[i][k] + (1 - x[i][j]) >= 0
-# For all i ≠ j, k=1..m
+# For all i != j, k=1..m
 ```
 $$
 \begin{array}{l}
@@ -109,7 +109,7 @@ $$
 # if vehicle k goes from i to j, then j must be visited after i
 
 t[j] * y[j][k] - (t[i] + 1) * y[i][k] + B*(1 - x[i][j]) >= 0
-# For all i ≠ j, k=1..m
+# For all i != j, k=1..m
 ```
 $$
 t_j y_{jk} \ge (t_i + 1)y_{ik} - B(1 - x_{ij}) \quad \forall i \neq j, k \in \{1, \ldots, m\}

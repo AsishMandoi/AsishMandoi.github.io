@@ -38,10 +38,6 @@ export default function Layout({ children, home, page, isPost }) {
       <div className={`${styles.container} ${home ? styles.home: ''}`}>
         <Head>
           <link rel="icon" href="/images/favicon.ico" />
-          {/* Automatic Webfont Optimization */}
-          <style data-href="/fonts/active.css">
-            {`@import url('/fonts/active.css');`}
-          </style>
           <meta name="description" content="A website powered by Nextjs, designed and built by Asish Mandoi" />
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.png" />
