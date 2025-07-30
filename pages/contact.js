@@ -83,6 +83,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required 
                 placeholder="Name"
+                autocomplete="name"
               />
               <span>*</span>
             </div>
@@ -94,6 +95,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Email"
+                autocomplete="email"
               />
               <span>*</span>
             </div>
@@ -104,6 +106,7 @@ export default function Contact() {
                 value={formData.referral}
                 onChange={handleChange}
                 placeholder="How did you hear about me?"
+                autocomplete="off"
               />
             </div>
             <div className={utilStyles.formField}>
@@ -114,6 +117,7 @@ export default function Contact() {
                 required
                 placeholder="What do you have in mind?"
                 rows="5"
+                autocomplete="off"
               />
               <span>*</span>
             </div>
