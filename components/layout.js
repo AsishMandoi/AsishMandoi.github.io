@@ -1,4 +1,4 @@
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -42,8 +42,9 @@ export default function Layout({ children, home, page, isPost }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.png" />
           <meta name="author" content={name} />
+          <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-55MS93B8" />
         </Head>
-        <GoogleTagManager gtmId="GTM-55MS93B8" />
+        <GoogleAnalytics gaId="G-6P2424X2JD" />
         <header className={styles.header}>
           {home ? (
             <>
