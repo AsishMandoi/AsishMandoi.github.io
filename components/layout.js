@@ -9,6 +9,9 @@ import Navbar from './navbar'
 import Navlist from './navlist'
 
 const name = 'Asish Mandoi'
+const GTM_ID = 'GTM-55MS93B8'
+const GA_ID = 'G-6P2424X2JD'
+
 export const siteTitle = name
 
 const quoteMap = {
@@ -42,9 +45,10 @@ export default function Layout({ children, home, page, isPost }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.png" />
           <meta name="author" content={name} />
+          <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-55MS93B8');`}</script>
           <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-55MS93B8" />
         </Head>
-        <GoogleAnalytics gaId="G-6P2424X2JD" />
+        <GoogleAnalytics gaId={GA_ID} />
         <header className={styles.header}>
           {home ? (
             <>
