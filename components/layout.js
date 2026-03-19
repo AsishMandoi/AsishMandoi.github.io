@@ -34,9 +34,30 @@ const quoteMap = {
   // }
 };
 
+function InstallGoogleTagManager() {
+  return (
+    <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      </Head>
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+    </>
+  );
+}
+
 export default function Layout({ children, home, page, isPost }) {
   return (
     <div className={`${styles.page} ${isPost ? styles.post : ''}`}>
+      <InstallGoogleTagManager />
       { <Navbar />}
       <div className={`${styles.container} ${home ? styles.home: ''}`}>
         <Head>
@@ -45,8 +66,6 @@ export default function Layout({ children, home, page, isPost }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="image" property="og:image" content="/images/preview-image.png" />
           <meta name="author" content={name} />
-          <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}</script>
-          <script async src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`} />
         </Head>
         <GoogleAnalytics gaId={GA_ID} />
         <header className={styles.header}>
